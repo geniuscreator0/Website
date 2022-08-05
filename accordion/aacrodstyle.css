@@ -61,8 +61,8 @@ html {
 body {
   font: 1em/1.4 "Quicksand", sans-serif;
   margin: 0 auto;
-  max-width: 960px;
-  padding: 5vw;
+  max-width: auto;
+  padding: auto;
 }
 
 h1 {
