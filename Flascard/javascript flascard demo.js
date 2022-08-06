@@ -6,8 +6,6 @@ const showButton = document.getElementById("show");
 const hideButton = document.getElementById("hide");
 const questionElement = document.getElementById("question");
 const answerElement = document.getElementById("answer");
-const addCardButton = document.getElementById("add-card");
-const clearButton = document.getElementById("clear");
 const addContainer = document.getElementById("add-container");
 
 let currentActiveCard = 0;
@@ -93,27 +91,5 @@ showButton.addEventListener("click", () => addContainer.classList.add("show"));
 hideButton.addEventListener("click", () =>
   addContainer.classList.remove("show")
 );
-
-addCardButton.addEventListener("click", () => {
-  const question = questionElement.value;
-  const answer = answerElement.value;
-  if (question.trim() && answer.trim()) {
-    const newCard = { question, answer };
-    createCard(newCard);
-    questionElement.value = "";
-    answerElement.value = "";
-    addContainer.classList.remove("show");
-    cardsData.push(newCard);
-    // setCardsData(cardsData);
-  }
-});
-
-clearButton.addEventListener("click", () => {
-  //   localStorage.clear();
-  cardsContainer.innerHTML = "";
-  currentElement.innerText = "";
-  //   history.go(0);
-});
-
 // Init
 createCards();
